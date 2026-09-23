@@ -1,0 +1,1028 @@
+/* ==========================================================================
+   INFINITYMAX - Kids Experience Design System & Dedicated Styles
+   Aesthetic: Future Athletes // Next-Gen Icons (Nike / Adidas / Jordan Kids)
+   ========================================================================== */
+
+:root {
+  /* High-Octane Youth Athletic Tokens */
+  --kids-volt: #ccff00;
+  --kids-volt-glow: rgba(204, 255, 0, 0.35);
+  --kids-coral: #ff3366;
+  --kids-coral-glow: rgba(255, 51, 102, 0.35);
+  --kids-cyan: #00e5ff;
+  --kids-cyan-glow: rgba(0, 229, 255, 0.3);
+  --kids-amber: #ffb703;
+  --kids-purple: #b5179e;
+  --kids-card-bg: rgba(22, 22, 28, 0.85);
+  --kids-border: rgba(255, 255, 255, 0.12);
+  --kids-radius-card: 16px;
+  --kids-radius-pill: 9999px;
+}
+
+/* ==========================================================================
+   1. KIDS ANNOUNCEMENT & HERO SHOWCASE
+   ========================================================================== */
+
+.kids-announcement {
+  background: linear-gradient(90deg, #ff3366, #ff7700, #ccff00, #00e5ff);
+  background-size: 300% 100%;
+  animation: kidsGradientPan 8s ease infinite;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+@keyframes kidsGradientPan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.kids-announcement span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hero Section */
+.kids-hero-section {
+  position: relative;
+  min-height: 580px;
+  background-color: #0d0d11;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.kids-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.kids-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.68) contrast(1.1);
+  transform: scale(1.02);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kids-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 12, 0.95) 0%,
+    rgba(10, 10, 12, 0.75) 45%,
+    rgba(10, 10, 12, 0.25) 100%
+  );
+}
+
+.kids-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 680px;
+  padding: 60px 0;
+}
+
+.kids-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(204, 255, 0, 0.15);
+  border: 1px solid var(--kids-volt);
+  color: var(--kids-volt);
+  padding: 6px 14px;
+  border-radius: var(--kids-radius-pill);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px var(--kids-volt-glow);
+}
+
+.kids-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.kids-hero-title span.highlight-volt {
+  color: var(--kids-volt);
+  text-shadow: 0 0 24px var(--kids-volt-glow);
+}
+
+.kids-hero-title span.highlight-coral {
+  color: var(--kids-coral);
+  text-shadow: 0 0 24px var(--kids-coral-glow);
+}
+
+.kids-hero-desc {
+  font-size: 1.05rem;
+  color: #d4d4d8;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+
+.kids-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.btn-kids-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--kids-volt);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  padding: 14px 28px;
+  border-radius: var(--kids-radius-pill);
+  transition: all var(--transition-fast);
+  box-shadow: 0 6px 20px var(--kids-volt-glow);
+}
+
+.btn-kids-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: #d8ff26;
+  box-shadow: 0 10px 28px var(--kids-volt-glow);
+}
+
+.btn-kids-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  padding: 14px 26px;
+  border-radius: var(--kids-radius-pill);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-fast);
+}
+
+.btn-kids-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Quick Features Row */
+.kids-hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kids-feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #a1a1aa;
+}
+
+.kids-feature-pill svg {
+  color: var(--kids-cyan);
+}
+
+/* ==========================================================================
+   2. AGE GROUP SWITCHER BAR
+   ========================================================================== */
+
+.kids-age-bar {
+  background: #111116;
+  border-bottom: 1px solid var(--border-light);
+  padding: 18px 0;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 50;
+  backdrop-filter: blur(16px);
+}
+
+.kids-age-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.kids-age-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.kids-age-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.kids-age-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.age-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #a1a1aa;
+  padding: 8px 16px;
+  border-radius: var(--kids-radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.age-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.age-tab-btn.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
+}
+
+.age-tab-btn .age-tag {
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: var(--kids-radius-pill);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.age-tab-btn.active .age-tag {
+  background: var(--kids-coral);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   3. CATEGORY CHIPS SCROLLER
+   ========================================================================== */
+
+.kids-categories-sec {
+  padding: 44px 0 24px;
+}
+
+.kids-cat-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.kids-cat-card {
+  position: relative;
+  background: var(--kids-card-bg);
+  border: 1px solid var(--kids-border);
+  border-radius: var(--kids-radius-card);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  overflow: hidden;
+}
+
+.kids-cat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.kids-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.kids-cat-card:hover::before {
+  background: var(--kids-volt);
+}
+
+.kids-cat-card.active {
+  background: rgba(204, 255, 0, 0.08);
+  border-color: var(--kids-volt);
+}
+
+.kids-cat-card.active::before {
+  background: var(--kids-volt);
+}
+
+.kids-cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: transform var(--transition-fast);
+}
+
+.kids-cat-card:hover .kids-cat-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.kids-cat-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.kids-cat-count {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   4. PLAYGROUND BUNDLE BUILDER (COMBO & SAVE)
+   ========================================================================== */
+
+.bundle-builder-sec {
+  padding: 60px 0;
+  background: radial-gradient(circle at 50% 20%, rgba(204, 255, 0, 0.08) 0%, rgba(10, 10, 14, 0) 70%), #0e0e12;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin: 40px 0;
+}
+
+.bundle-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.bundle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 51, 102, 0.15);
+  border: 1px solid var(--kids-coral);
+  color: var(--kids-coral);
+  padding: 4px 12px;
+  border-radius: var(--kids-radius-pill);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.bundle-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.bundle-desc {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+}
+
+.bundle-builder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .bundle-builder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bundle-slot-card {
+  background: var(--kids-card-bg);
+  border: 1px solid var(--kids-border);
+  border-radius: var(--kids-radius-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.bundle-slot-card.selected {
+  border-color: var(--kids-volt);
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.15);
+}
+
+.bundle-slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bundle-step-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--kids-cyan);
+}
+
+.bundle-slot-img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #18181f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bundle-slot-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.bundle-slot-card:hover .bundle-slot-img img {
+  transform: scale(1.05);
+}
+
+.bundle-slot-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bundle-slot-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--kids-volt);
+}
+
+.bundle-size-select {
+  width: 100%;
+  background: #141419;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.bundle-summary-bar {
+  background: #16161c;
+  border: 1px solid var(--kids-border);
+  border-radius: var(--kids-radius-card);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.bundle-calc-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.bundle-total-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.bundle-label {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.bundle-pricing-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.bundle-final-price {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.bundle-orig-price {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.bundle-savings-tag {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--kids-radius-pill);
+}
+
+.btn-bundle-checkout {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--kids-volt) 0%, #a3e635 100%);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  padding: 16px 36px;
+  border-radius: var(--kids-radius-pill);
+  transition: all var(--transition-fast);
+  box-shadow: 0 8px 24px var(--kids-volt-glow);
+}
+
+.btn-bundle-checkout:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px var(--kids-volt-glow);
+}
+
+/* ==========================================================================
+   5. KIDS CATALOG & PRODUCT CARDS
+   ========================================================================== */
+
+.kids-catalog-sec {
+  padding: 40px 0 80px;
+}
+
+.kids-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.kids-title-group h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.kids-title-group p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+/* Kid Product Card Enhancements */
+.kid-product-card {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--kids-radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.kid-product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.kid-card-media {
+  position: relative;
+  width: 100%;
+  padding-top: 105%;
+  background: #18181f;
+  overflow: hidden;
+}
+
+.kid-card-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.kid-product-card:hover .kid-card-media img {
+  transform: scale(1.06);
+}
+
+.kid-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(10, 10, 14, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: var(--kids-radius-pill);
+  text-transform: uppercase;
+}
+
+.kid-card-badge.badge-volt {
+  border-color: var(--kids-volt);
+  color: var(--kids-volt);
+}
+
+.kid-card-badge.badge-coral {
+  border-color: var(--kids-coral);
+  color: var(--kids-coral);
+}
+
+.kid-card-age-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  color: #d4d4d8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.kid-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.kid-brand-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.kid-brand-name {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.kid-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  min-height: 2.7em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kid-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #d4d4d8;
+  margin-bottom: 12px;
+}
+
+.kid-star {
+  color: var(--accent-gold);
+  fill: currentColor;
+  width: 14px;
+  height: 14px;
+}
+
+.kid-card-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.kid-current-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.kid-orig-price {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+}
+
+.kid-discount-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--kids-coral);
+}
+
+.kid-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-kid-bag {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding: 10px 14px;
+  border-radius: var(--kids-radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.btn-kid-bag:hover {
+  background: var(--kids-volt);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   6. PARENT CONFIDENCE & GUARANTEE SECTION
+   ========================================================================== */
+
+.kids-trust-sec {
+  padding: 60px 0;
+  background: #0d0d11;
+  border-top: 1px solid var(--border-light);
+}
+
+.kids-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kids-trust-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--kids-radius-card);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-smooth);
+}
+
+.kids-trust-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.kids-trust-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(204, 255, 0, 0.1);
+  color: var(--kids-volt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.kids-trust-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.kids-trust-desc {
+  font-size: 0.88rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   7. INTERACTIVE SIZE & GROWTH ADVISOR MODAL
+   ========================================================================== */
+
+.size-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-smooth);
+}
+
+.size-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.size-modal-card {
+  width: 100%;
+  max-width: 580px;
+  background: #141419;
+  border: 1px solid var(--kids-border);
+  border-radius: 20px;
+  padding: 36px 32px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  transform: translateY(20px);
+  transition: transform var(--transition-smooth);
+}
+
+.size-modal-backdrop.active .size-modal-card {
+  transform: translateY(0);
+}
+
+.size-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.size-modal-subtitle {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  margin-bottom: 24px;
+}
+
+.size-calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.size-calc-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.size-calc-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.size-calc-input,
+.size-calc-select {
+  background: #1a1a22;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 0.92rem;
+}
+
+.size-calc-input:focus,
+.size-calc-select:focus {
+  border-color: var(--kids-volt);
+  outline: none;
+}
+
+.size-result-box {
+  margin-top: 14px;
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px dashed var(--kids-volt);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.size-result-label {
+  font-size: 0.82rem;
+  color: #d4d4d8;
+}
+
+.size-result-val {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--kids-volt);
+}
+
+/* ==========================================================================
+   8. CONFETTI BURST ANIMATION
+   ========================================================================== */
+
+.confetti-particle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: confettiFall 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0.4) rotate(720deg);
+  }
+}

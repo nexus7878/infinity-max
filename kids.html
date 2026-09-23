@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFINITY KIDS — Future Athletes & Next-Gen Streetwear | INFINITYMAX</title>
+  <meta name="description" content="Shop high-performance kids sneakers, tech fleece tracksuits, school backpacks, and all-weather jackets from Nike, Adidas, Jordan, Puma, and Zara at INFINITYMAX Kids.">
+
+  <!-- Favicon / Brand Identity -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png">
+
+  <!-- Google Fonts Preconnect & Plus Jakarta Sans / Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/kids.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. KIDS DEDICATED ANNOUNCEMENT BAR
+       ====================================================================== -->
+  <aside class="kids-announcement" role="complementary" aria-label="Kids Festival Announcement">
+    <span>⚡ KIDS PLAYGROUND FEST: BUY 2+ ITEMS GET 20% OFF</span>
+    <span>•</span>
+    <span>🔄 30-DAY GROWTH FIT GUARANTEE</span>
+    <span>•</span>
+    <span>🚚 FREE EXPRESS DELIVERY ABOVE ₹999</span>
+  </aside>
+
+  <!-- ======================================================================
+       2. STICKY HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      
+      <!-- Left: Brand Logo & Desktop Navigation -->
+      <div class="header-left">
+        <a href="index.html" class="brand-logo" aria-label="INFINITYMAX Home">
+          <img src="assets/logo/logo.png" alt="INFINITYMAX Logo">
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+          <a href="index.html#categories" class="nav-link">Shop</a>
+          <a href="index.html#newarrivals" class="nav-link">Men</a>
+          <a href="index.html#newarrivals" class="nav-link">Women</a>
+          <a href="kids.html" class="nav-link active" style="color: var(--kids-volt); font-weight: 800;">Kids</a>
+          <a href="index.html#brands" class="nav-link">Brands</a>
+          <a href="index.html#newarrivals" class="nav-link">New</a>
+          <a href="index.html#limiteddrop" class="nav-link sale-link">Sale</a>
+        </nav>
+      </div>
+
+      <!-- Center: Search Input with Auto-Suggestions -->
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input 
+            type="text" 
+            id="headerSearchInput" 
+            class="search-input" 
+            placeholder="Search kids sneakers, sets, backpacks..." 
+            autocomplete="off"
+            aria-label="Search kids catalog"
+          >
+          <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">✕</button>
+        </div>
+
+        <!-- Search Dropdown Box -->
+        <div class="search-dropdown" id="searchDropdown">
+          <div id="searchResultsWrap">
+            <div class="search-dropdown-section">
+              <div class="dropdown-section-title">Trending in Kids</div>
+              <div class="search-tags">
+                <button class="search-tag">Kids Air Max</button>
+                <button class="search-tag">Superstar 360</button>
+                <button class="search-tag">Tech Fleece Set</button>
+                <button class="search-tag">Jordan Backpack</button>
+                <button class="search-tag">Kids Smartwatch</button>
+              </div>
+            </div>
+            <div class="search-dropdown-section">
+              <div class="dropdown-section-title">Popular Kids Brands</div>
+              <div class="search-tags">
+                <button class="search-tag">Nike</button>
+                <button class="search-tag">Adidas</button>
+                <button class="search-tag">Jordan</button>
+                <button class="search-tag">Puma</button>
+                <button class="search-tag">Zara</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: User Actions (Wishlist, Account, Cart) -->
+      <div class="header-actions">
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="header-action-btn" id="wishlistHeaderBtn" aria-label="View Saved Items">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Account -->
+        <a href="account.html" class="header-action-btn" id="accountHeaderBtn" aria-label="User Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+
+        <!-- Cart Bag -->
+        <button class="header-action-btn open-cart-btn" id="cartHeaderBtn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="header-action-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE NAVIGATION DRAWER
+       ====================================================================== -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <nav class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <img src="assets/logo/logo.png" alt="INFINITYMAX" style="height: 32px;">
+      <button class="modal-close-btn" id="mobileNavClose" aria-label="Close Mobile Menu" style="position: static;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-body">
+      <a href="index.html#categories" class="mobile-nav-link">Shop All</a>
+      <a href="index.html#newarrivals" class="mobile-nav-link">Men</a>
+      <a href="index.html#newarrivals" class="mobile-nav-link">Women</a>
+      <a href="kids.html" class="mobile-nav-link active" style="color: var(--kids-volt); font-weight: 800;">Kids (Special Edition)</a>
+      <a href="index.html#brands" class="mobile-nav-link">Brands</a>
+      <a href="index.html#newarrivals" class="mobile-nav-link">New Arrivals</a>
+      <a href="index.html#limiteddrop" class="mobile-nav-link" style="color: var(--accent-orange);">Limited Drop</a>
+      <div class="mobile-nav-divider"></div>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist</a>
+      <a href="account.html" class="mobile-nav-link">My Account</a>
+      <a href="order.html" class="mobile-nav-link">Track Orders</a>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       3. HIGH-ENERGY KIDS HERO SHOWCASE
+       ====================================================================== -->
+  <section class="kids-hero-section" aria-label="Kids Collection Hero">
+    <div class="kids-hero-bg">
+      <img src="assets/banners/hero_kids_editorial.jpg" alt="Young athletes wearing modern streetwear on urban court">
+    </div>
+    <div class="kids-hero-overlay"></div>
+    <div class="container kids-hero-content">
+      <span class="kids-hero-badge">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        NEXT-GEN ICONS // SPRING 2026
+      </span>
+      <h1 class="kids-hero-title">
+        LITTLE ICONS.<br>
+        <span class="highlight-volt">UNSTOPPABLE</span> <span class="highlight-coral">ENERGY.</span>
+      </h1>
+      <p class="kids-hero-desc">
+        Engineered for recess dominance, weekend athletics, and street-smart comfort. Explore youth silhouettes from Nike, Adidas, Jordan, and Puma tailored specifically for growing athletes.
+      </p>
+      <div class="kids-hero-actions">
+        <a href="#kidsCatalog" class="btn-kids-primary">
+          EXPLORE KIDS DROPS ↓
+        </a>
+        <button class="btn-kids-outline open-size-advisor-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.3 15.3l-6.6-6.6a2 2 0 0 0-2.8 0L2.7 17.9a2 2 0 0 0 0 2.8l1.4 1.4a2 2 0 0 0 2.8 0l9.2-9.2"/>
+            <path d="M14.5 9.5l2 2"/>
+            <path d="M11.5 12.5l2 2"/>
+            <path d="M8.5 15.5l2 2"/>
+          </svg>
+          GROWTH & SIZE ADVISOR
+        </button>
+      </div>
+
+      <div class="kids-hero-features">
+        <div class="kids-feature-pill">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Reinforced Toe-Guards
+        </div>
+        <div class="kids-feature-pill">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Slip-On Elastic Fits
+        </div>
+        <div class="kids-feature-pill">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Machine-Wash Tested
+        </div>
+        <div class="kids-feature-pill">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          30-Day Growth Exchange
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       4. INTERACTIVE AGE GROUP SWITCHER
+       ====================================================================== -->
+  <section class="kids-age-bar" aria-label="Filter by Child Age">
+    <div class="container kids-age-inner">
+      <div class="kids-age-label">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        <span>Shop by Age:</span>
+      </div>
+
+      <div class="kids-age-tabs">
+        <button class="age-tab-btn active" data-age="All">
+          All Ages
+        </button>
+        <button class="age-tab-btn" data-age="Toddler">
+          Toddler <span class="age-tag">0–3Y</span>
+        </button>
+        <button class="age-tab-btn" data-age="Little Kids">
+          Little Kids <span class="age-tag">4–7Y</span>
+        </button>
+        <button class="age-tab-btn" data-age="Big Kids">
+          Big Kids <span class="age-tag">8–12Y</span>
+        </button>
+        <button class="age-tab-btn" data-age="Teens">
+          Teens <span class="age-tag">13–16Y</span>
+        </button>
+      </div>
+
+      <button class="btn-kids-outline open-size-advisor-btn" style="padding: 6px 14px; font-size: 0.78rem;">
+        Size Calculator 📐
+      </button>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       5. KIDS CATEGORY QUICK CHIPS
+       ====================================================================== -->
+  <section class="kids-categories-sec" aria-label="Kids Categories">
+    <div class="container">
+      <div class="kids-cat-cards-grid">
+        <div class="kids-cat-card" data-cat="Sneakers">
+          <div class="kids-cat-icon">👟</div>
+          <span class="kids-cat-name">Kicks & Sneakers</span>
+          <span class="kids-cat-count">Air Max, Superstars</span>
+        </div>
+        <div class="kids-cat-card" data-cat="Tracksuits">
+          <div class="kids-cat-icon">🔥</div>
+          <span class="kids-cat-name">Tech Fleece Sets</span>
+          <span class="kids-cat-count">Joggers & Hoodies</span>
+        </div>
+        <div class="kids-cat-card" data-cat="Backpacks">
+          <div class="kids-cat-icon">🎒</div>
+          <span class="kids-cat-name">School & Sports</span>
+          <span class="kids-cat-count">600D Waterproof Packs</span>
+        </div>
+        <div class="kids-cat-card" data-cat="Jackets">
+          <div class="kids-cat-icon">🌧️</div>
+          <span class="kids-cat-name">All-Weather Shells</span>
+          <span class="kids-cat-count">Windbreakers & Denim</span>
+        </div>
+        <div class="kids-cat-card" data-cat="Tech">
+          <div class="kids-cat-icon">⌚</div>
+          <span class="kids-cat-name">Kids Smartwatch</span>
+          <span class="kids-cat-count">GPS & Activity Tracking</span>
+        </div>
+        <div class="kids-cat-card" data-cat="Apparel">
+          <div class="kids-cat-icon">🎽</div>
+          <span class="kids-cat-name">Everyday Tees</span>
+          <span class="kids-cat-count">100% Organic Cotton</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. PLAYGROUND 3-PIECE BUNDLE BUILDER
+       ====================================================================== -->
+  <section class="bundle-builder-sec" aria-label="Playground Complete Set Bundle">
+    <div class="container">
+      <div class="bundle-header">
+        <span class="bundle-badge">⚡ PLAYGROUND COMBO OFFER</span>
+        <h2 class="bundle-title">THE 3-PIECE PLAYGROUND DROP</h2>
+        <p class="bundle-desc">
+          Bundle the Nike Air Max Flyer, Puma Tech Fleece Set, and Jordan Flight Pack together. Take <strong>20% off</strong> the entire combo with a single click.
+        </p>
+      </div>
+
+      <div class="bundle-builder-grid">
+        <!-- Item 1: Sneaker -->
+        <div class="bundle-slot-card selected">
+          <div class="bundle-slot-header">
+            <span class="bundle-step-tag">Step 1 • Footwear</span>
+            <span style="font-size: 0.72rem; color: var(--kids-volt); font-weight: 700;">INCLUDED</span>
+          </div>
+          <div class="bundle-slot-img">
+            <img src="assets/products/kids_airmax.jpg" alt="Nike Air Max Pulse Kids">
+          </div>
+          <div class="bundle-slot-name">Nike Air Max Pulse Kids (Flyer)</div>
+          <div class="bundle-slot-price">₹4,995</div>
+          <select class="bundle-size-select" id="bundleSneakerSize" aria-label="Select sneaker size">
+            <option value="UK 1K">Size: UK 1K (Age 7-8)</option>
+            <option value="UK 2K" selected>Size: UK 2K (Age 8-9)</option>
+            <option value="UK 3K">Size: UK 3K (Age 9-10)</option>
+            <option value="UK 4K">Size: UK 4K (Age 10-11)</option>
+            <option value="UK 5K">Size: UK 5K (Age 11-13)</option>
+          </select>
+        </div>
+
+        <!-- Item 2: Tech Fleece -->
+        <div class="bundle-slot-card selected">
+          <div class="bundle-slot-header">
+            <span class="bundle-step-tag">Step 2 • Tracksuit</span>
+            <span style="font-size: 0.72rem; color: var(--kids-volt); font-weight: 700;">INCLUDED</span>
+          </div>
+          <div class="bundle-slot-img">
+            <img src="assets/banners/campaign_apparel_editorial_1789480944172.jpg" alt="Puma Squad Kids Tech Fleece Set">
+          </div>
+          <div class="bundle-slot-name">Puma Squad Kids Tech Fleece Set</div>
+          <div class="bundle-slot-price">₹2,999</div>
+          <select class="bundle-size-select" id="bundleApparelSize" aria-label="Select tracksuit size">
+            <option value="6Y">Size: 6Y (Height ~116cm)</option>
+            <option value="8Y" selected>Size: 8Y (Height ~128cm)</option>
+            <option value="10Y">Size: 10Y (Height ~140cm)</option>
+            <option value="12Y">Size: 12Y (Height ~152cm)</option>
+          </select>
+        </div>
+
+        <!-- Item 3: Backpack -->
+        <div class="bundle-slot-card selected">
+          <div class="bundle-slot-header">
+            <span class="bundle-step-tag">Step 3 • School Pack</span>
+            <span style="font-size: 0.72rem; color: var(--kids-volt); font-weight: 700;">INCLUDED</span>
+          </div>
+          <div class="bundle-slot-img">
+            <img src="assets/products/pumabackpack.jpg" alt="Jordan Jumpman Kids Flight Backpack">
+          </div>
+          <div class="bundle-slot-name">Jordan Jumpman Flight Backpack</div>
+          <div class="bundle-slot-price">₹2,299</div>
+          <div style="font-size: 0.82rem; color: #a1a1aa; padding: 10px 0;">
+            Includes 18L storage, tablet compartment & reflective clips.
+          </div>
+        </div>
+      </div>
+
+      <!-- Bundle Summary Bar -->
+      <div class="bundle-summary-bar">
+        <div class="bundle-calc-info">
+          <div class="bundle-total-box">
+            <span class="bundle-label">Bundle Value:</span>
+            <div class="bundle-pricing-row">
+              <span class="bundle-final-price" id="bundleFinalPrice">₹8,234</span>
+              <span class="bundle-orig-price" id="bundleOrigPrice">₹10,293</span>
+            </div>
+          </div>
+          <span class="bundle-savings-tag" id="bundleSavings">SAVE ₹2,059 (20% OFF)</span>
+        </div>
+
+        <button class="btn-bundle-checkout" id="addBundleBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          ADD 3-PIECE BUNDLE TO BAG
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       7. KIDS CATALOG GRID & LIVE FILTERING
+       ====================================================================== -->
+  <section class="kids-catalog-sec" id="kidsCatalog" aria-label="Kids Catalog">
+    <div class="container">
+      <div class="kids-section-head">
+        <div class="kids-title-group">
+          <h2>KIDS DROP CATALOG</h2>
+          <p id="kidsProductCount">Showing all kids styles</p>
+        </div>
+
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <label for="kidsSortSelect" style="font-size: 0.82rem; color: var(--text-tertiary); font-weight: 700;">SORT BY:</label>
+          <select id="kidsSortSelect" class="bundle-size-select" style="width: auto; padding: 8px 16px;">
+            <option value="featured">Featured Drops</option>
+            <option value="rating">Top Customer Rated</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Grid of Products -->
+      <div class="new-arrivals-grid" id="kidsProductsGrid">
+        <!-- Rendered by js/kids.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. PARENT CONFIDENCE & GUARANTEE SECTION
+       ====================================================================== -->
+  <section class="kids-trust-sec" aria-label="Parent Guarantees">
+    <div class="container">
+      <div class="kids-trust-grid">
+        <div class="kids-trust-card">
+          <div class="kids-trust-icon">🔄</div>
+          <h3 class="kids-trust-title">30-Day Growth Fit Guarantee</h3>
+          <p class="kids-trust-desc">
+            Kids grow fast. If their new shoes or set doesn't fit comfortably within 30 days, we'll swap it for the next size with zero shipping charges.
+          </p>
+        </div>
+
+        <div class="kids-trust-card">
+          <div class="kids-trust-icon">🧼</div>
+          <h3 class="kids-trust-title">Machine-Wash Tested</h3>
+          <p class="kids-trust-desc">
+            Every youth garment and track set is certified against shrinkage and color fading across 50+ rigorous wash-and-dry cycles.
+          </p>
+        </div>
+
+        <div class="kids-trust-card">
+          <div class="kids-trust-icon">🌿</div>
+          <h3 class="kids-trust-title">Certified Non-Toxic & Safe</h3>
+          <p class="kids-trust-desc">
+            All materials use skin-safe organic cottons, BPA-free trims, and non-marking lightweight EVA soles that won't scuff school gym floors.
+          </p>
+        </div>
+
+        <div class="kids-trust-card">
+          <div class="kids-trust-icon">📐</div>
+          <h3 class="kids-trust-title">Smart Size Advisor</h3>
+          <p class="kids-trust-desc">
+            Not sure between UK 1K and UK 2K? Use our interactive digital foot and height calculator for a personalized growth recommendation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. INTERACTIVE GROWTH & SIZE ADVISOR MODAL
+       ====================================================================== -->
+  <div class="size-modal-backdrop" id="sizeAdvisorModal" role="dialog" aria-modal="true" aria-label="Kids Size & Growth Advisor">
+    <div class="size-modal-card">
+      <button class="modal-close-btn" id="closeSizeAdvisorBtn" aria-label="Close Advisor" style="position: absolute; top: 20px; right: 20px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <h3 class="size-modal-title">GROWTH & SIZE ADVISOR 📐</h3>
+      <p class="size-modal-subtitle">
+        Enter your child's age, foot measurement, or height to get their exact size recommendation with a healthy room-to-grow allowance.
+      </p>
+
+      <div class="size-calc-form">
+        <div class="size-calc-group">
+          <label class="size-calc-label" for="advisorAgeInput">Child's Age (Years)</label>
+          <input type="number" id="advisorAgeInput" class="size-calc-input" min="1" max="16" value="7">
+        </div>
+
+        <div class="size-calc-group">
+          <label class="size-calc-label" for="advisorFootInput">Foot Length (Centimeters - heel to longest toe)</label>
+          <input type="number" id="advisorFootInput" class="size-calc-input" step="0.5" min="10" max="26" value="18.5">
+        </div>
+
+        <div class="size-calc-group">
+          <label class="size-calc-label" for="advisorHeightInput">Child's Height (Centimeters)</label>
+          <input type="number" id="advisorHeightInput" class="size-calc-input" min="70" max="175" value="122">
+        </div>
+
+        <button class="btn-kids-primary" id="calcSizeBtn" style="width: 100%; margin-top: 8px;">
+          CALCULATE RECOMMENDED SIZES
+        </button>
+
+        <div class="size-result-box" id="advisorResultBox" style="display: none;">
+          <div>
+            <div class="size-result-label">Recommended Apparel:</div>
+            <div class="size-result-val" id="advisorResultApparel">8Y</div>
+          </div>
+          <div style="text-align: right;">
+            <div class="size-result-label">Recommended Footwear:</div>
+            <div class="size-result-val" id="advisorResultShoe">UK 1K</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       10. GLOBAL SHARED CART DRAWER
+       ====================================================================== -->
+  <div class="cart-backdrop" id="cartBackdrop" aria-label="Close Shopping Bag"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <span>SHOPPING BAG</span>
+        <span class="badge-count cart-count-badge" style="display: none;">0</span>
+      </div>
+      <button class="modal-close-btn" id="cartCloseBtn" aria-label="Close Bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- Injected dynamically via js/script.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-calc-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-calc-row">
+        <span>Estimated Delivery</span>
+        <span style="color: var(--accent-green);">FREE</span>
+      </div>
+      <div class="cart-calc-row total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" onclick="proceedToCheckout()">
+        PROCEED TO CHECKOUT
+      </button>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       11. QUICK VIEW MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="modal-content-wrap">
+      <button class="modal-close-btn" id="quickViewClose" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top trigger -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       12. FOOTER
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="assets/logo/logo.png" alt="INFINITYMAX" style="height: 36px; margin-bottom: 16px;">
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; max-width: 320px;">
+          INFINITY KIDS brings elite athletic performance and youth street culture under one curated marketplace. Built for the next generation of creators and athletes.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">KIDS CATEGORIES</div>
+        <ul class="footer-links">
+          <li><a href="kids.html">Kids Sneakers</a></li>
+          <li><a href="kids.html">Tech Fleece Tracksuits</a></li>
+          <li><a href="kids.html">School Backpacks</a></li>
+          <li><a href="kids.html">Toddler First Steps</a></li>
+          <li><a href="kids.html">Youth Jackets</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">PARENT CARE</div>
+        <ul class="footer-links">
+          <li><a href="#" class="open-size-advisor-btn">Size & Growth Guide</a></li>
+          <li><a href="order.html">Track Order & Returns</a></li>
+          <li><a href="#">30-Day Growth Guarantee</a></li>
+          <li><a href="account.html">Parent Account</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">THE DROP LIST</div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 14px;">
+          Be first to access limited kids sneaker drops and back-to-school season privileges.
+        </p>
+        <form class="footer-newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterInput" placeholder="Enter parent email..." required>
+          <button type="submit" class="btn btn-primary" style="padding: 10px 18px;">JOIN</button>
+        </form>
+        <div id="newsletterMsg" class="newsletter-msg"></div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 INFINITYMAX Corporation. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Sale</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Shared Base + Kids Dedicated Controller -->
+  <script src="js/script.js"></script>
+  <script src="js/kids.js"></script>
+</body>
+</html>
