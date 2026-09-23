@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Dashboard — INFINITYMAX</title>
+  <meta name="description" content="Manage your orders, profile details, addresses, and payment options at INFINITYMAX.">
+
+  <!-- Favicon / Brand Identity -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png">
+
+  <!-- Google Fonts Preconnect & Inter / Plus Jakarta Sans / Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. ANNOUNCEMENT BAR
+       ====================================================================== -->
+  <aside class="announcement-bar" role="complementary" aria-label="Announcement">
+    <span>FREE DELIVERY ON ORDERS ABOVE ₹999</span>
+    <span class="announcement-bullet">•</span>
+    <span>EASY 7-DAY RETURNS</span>
+  </aside>
+
+  <!-- ======================================================================
+       2. STICKY HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      
+      <!-- Left: Brand Logo & Desktop Navigation -->
+      <div class="header-left">
+        <a href="index.html" class="brand-logo" aria-label="INFINITYMAX Home">
+          <img src="assets/logo/logo.png" alt="INFINITYMAX Logo">
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+          <a href="index.html#categories" class="nav-link">Shop</a>
+          <a href="index.html#newarrivals" class="nav-link">Men</a>
+          <a href="index.html#newarrivals" class="nav-link">Women</a>
+          <a href="index.html#categories" class="nav-link">Kids</a>
+          <a href="index.html#brands" class="nav-link">Brands</a>
+          <a href="index.html#newarrivals" class="nav-link">New</a>
+          <a href="index.html#limiteddrop" class="nav-link sale-link">Sale</a>
+        </nav>
+      </div>
+
+      <!-- Center: Search Input with Auto-Suggestions -->
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input 
+            type="text" 
+            id="headerSearchInput" 
+            class="search-input" 
+            placeholder="Search for products, brands and more..." 
+            autocomplete="off"
+            aria-label="Search catalog"
+          >
+          <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">✕</button>
+        </div>
+
+        <!-- Search Dropdown Box -->
+        <div class="search-dropdown" id="searchDropdown">
+          <div id="searchResultsWrap">
+            <div class="search-dropdown-section">
+              <div class="dropdown-section-title">Trending Searches</div>
+              <div class="search-tags">
+                <button class="search-tag">Nike Air Force</button>
+                <button class="search-tag">Adidas Campus</button>
+                <button class="search-tag">Heavyweight Hoodie</button>
+                <button class="search-tag">Apple Watch</button>
+                <button class="search-tag">Overcoat</button>
+              </div>
+            </div>
+            <div class="search-dropdown-section">
+              <div class="dropdown-section-title">Popular Brands</div>
+              <div class="search-tags">
+                <button class="search-tag">Nike</button>
+                <button class="search-tag">Adidas</button>
+                <button class="search-tag">Apple</button>
+                <button class="search-tag">Zara</button>
+                <button class="search-tag">Puma</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: User Actions (Wishlist, Account, Cart) -->
+      <div class="header-actions">
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="header-action-btn" id="wishlistHeaderBtn" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Account -->
+        <a href="account.html" class="header-action-btn" id="accountHeaderBtn" aria-label="User Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+
+        <!-- Cart Bag -->
+        <button class="header-action-btn open-cart-btn" id="cartHeaderBtn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Trigger -->
+        <button class="header-action-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MOBILE NAVIGATION DRAWER
+       ====================================================================== -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <nav class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <img src="assets/logo/logo.png" alt="INFINITYMAX" style="height: 32px;">
+      <button class="modal-close-btn" id="mobileNavClose" aria-label="Close Mobile Menu" style="position: static;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-list">
+      <a href="index.html#categories" class="mobile-nav-link">Shop <span>→</span></a>
+      <a href="index.html#newarrivals" class="mobile-nav-link">Men <span>→</span></a>
+      <a href="index.html#newarrivals" class="mobile-nav-link">Women <span>→</span></a>
+      <a href="index.html#categories" class="mobile-nav-link">Kids <span>→</span></a>
+      <a href="index.html#brands" class="mobile-nav-link">Brands <span>→</span></a>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist <span>→</span></a>
+      <a href="order.html" class="mobile-nav-link">My Orders <span>→</span></a>
+      <a href="account.html" class="mobile-nav-link">My Account <span>→</span></a>
+      <a href="index.html#limiteddrop" class="mobile-nav-link" style="color: #f87171;">Sale <span>→</span></a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <button class="mobile-nav-account-btn open-cart-btn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Shopping Bag (<span class="cart-count-badge">0</span>)</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       ACCOUNT APP MOUNT CONTAINER
+       ====================================================================== -->
+  <main id="accountAppContainer">
+    <!-- Rendered dynamically via js/account.js -->
+  </main>
+
+  <!-- ======================================================================
+       GLOBAL FOOTER
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      <!-- Footer Top Grid -->
+      <div class="footer-top">
+        
+        <!-- Col 1: BRAND BIO -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <img src="assets/logo/logo.png" alt="INFINITYMAX Logo">
+          </a>
+          <p class="footer-brand-desc">
+            INFINITYMAX is the premier multi-brand marketplace redefining luxury street culture, high-performance athletic wear, and cutting-edge personal technology.
+          </p>
+          <div class="social-links-group">
+            <a href="#" class="social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="social-link" aria-label="X Twitter">X</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+            <a href="#" class="social-link" aria-label="Discord">DC</a>
+          </div>
+        </div>
+
+        <!-- Col 2: SHOP -->
+        <div>
+          <h4 class="footer-col-title">SHOP</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#categories" class="footer-link">Sneakers & Footwear</a></li>
+            <li><a href="index.html#newarrivals" class="footer-link">Heavyweight Outerwear</a></li>
+            <li><a href="index.html#limiteddrop" class="footer-link">Tech & Wearables</a></li>
+            <li><a href="index.html#brands" class="footer-link">Designer Accessories</a></li>
+            <li><a href="index.html#limiteddrop" class="footer-link">Limited Edition Drops</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: CUSTOMER CARE -->
+        <div>
+          <h4 class="footer-col-title">CUSTOMER CARE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="order.html" class="footer-link">Order Status & Tracking</a></li>
+            <li><a href="order.html" class="footer-link">Shipping & Delivery Policy</a></li>
+            <li><a href="order.html" class="footer-link">Returns & Exchanges</a></li>
+            <li><a href="#" class="footer-link">Size Guide & Fit Guarantee</a></li>
+            <li><a href="#" class="footer-link">Contact Concierge</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: ABOUT -->
+        <div>
+          <h4 class="footer-col-title">COMPANY</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#" class="footer-link">Our Story</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Sustainability</a></li>
+            <li><a href="#" class="footer-link">Press</a></li>
+            <li><a href="#" class="footer-link">Investor Relations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: LEGAL -->
+        <div>
+          <h4 class="footer-col-title">LEGAL</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>© 2026 INFINITYMAX. All rights reserved. Built for exceptional commerce.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="footer-link">India / INR (₹)</a>
+          <a href="#" class="footer-link">Security Certified</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       SLIDE-OUT CART DRAWER
+       ====================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Bag</span>
+      </div>
+      <button class="modal-close-btn" id="cartCloseBtn" aria-label="Close Shopping Bag" style="position: static;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-items-container" id="cartItemsContainer">
+      <!-- Populated via script.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-calc-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-calc-row">
+        <span>Estimated Delivery</span>
+        <span style="color: var(--accent-green);">FREE</span>
+      </div>
+      <div class="cart-calc-row total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-checkout" onclick="proceedToCheckout()">
+        PROCEED TO CHECKOUT
+      </button>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       QUICK VIEW MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="modal-content-wrap">
+      <button class="modal-close-btn" id="quickViewClose" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top floating trigger -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>
